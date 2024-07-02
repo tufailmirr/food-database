@@ -1,14 +1,15 @@
 // components/__tests__/FoodTable.test.tsx
-// @ts-nocheck
+
 
 import React from 'react';
 
 import  { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'
 import FoodTable from '../Table/FoodTable';
+import {  IFoodItem } from '@/types/FoodApiProps';
 
 
-const mockData = [
+const mockData : IFoodItem[] = [
   {
     foodId: '1',
     label: 'Apple',

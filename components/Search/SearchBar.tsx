@@ -15,8 +15,9 @@ const SearchBar: React.FC<SearchInputProps> = ({ defaultValue, onInputChange, ..
             className=' bg-slate-300 p-5 rounded-md border-teal-100 outline-orange-300'
             onChange={handleChange}
             defaultValue={defaultValue}
-            {...props}
             aria-label="Search"
+            data-testid="search-bar"
+            {...props}
         />
     )
 }
