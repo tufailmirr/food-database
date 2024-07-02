@@ -8,6 +8,7 @@ const Button: React.FC<IButtonProps> = ({
   variant = "primary",
   disabled = false,
   className = "",
+  ...props
 }) => {
   const baseStyle =
     "px-4 py-2 rounded focus:outline-none transition duration-150 ease-in-out";
@@ -24,6 +25,7 @@ const Button: React.FC<IButtonProps> = ({
       onClick={onClick}
       className={combinedClassName}
       disabled={disabled}
+      {...props}
     >
       {children}
     </button>

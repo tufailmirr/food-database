@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SearchAutocomplete from "@/components/Search/SearchAutoComplete";
 import Navbar from "@/components/Navbar";
+import { Suspense } from "react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,12 +18,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log("main layout")
   return (
     <html lang="en">
       <body className={`${inter.className} p-20`}>
         <header className="">
         <Navbar />
+        <Suspense>
         <SearchAutocomplete />
+        </Suspense>
         </header>
         {children}
       </body>
