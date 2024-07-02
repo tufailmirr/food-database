@@ -3,7 +3,7 @@ export interface IFoodItem {
     foodId: string;
     label: string;
     nutrients: Record<string, string>;
-    foodContentsLabel: string;
+    foodContentsLabel?: string;
   }
   
 export interface IFoodDetails {
